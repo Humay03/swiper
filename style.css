@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.image-slider {
+    min-height: 30em;
+    height: 100vh;
+    position: relative;
+    background-image: url(https://images4.alphacoders.com/804/80406.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 300ms;
+
+
+    .arrow-left {
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition:  300ms;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+
+    .arrow-right {
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition:  300ms;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+}
+
+.caption {
+    background: linear-gradient(rgba(0, 0, 0, 0), #000);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 1em 2em 1em;
+    text-align: center;
+
+    >h1 {
+        margin: 0;
+        color: white;
+
+    }
+
+    >p {
+        color: #8a8a8a;
+
+    }
+}
+.image-fade{
+    animation: imgFade 500ms ease-in-out;
+}
+@keyframes imgFade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
